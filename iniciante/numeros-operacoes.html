@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Online</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="imagens/faviconcourse.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Botão para alternar entre modos claro e escuro -->
+    <button class="dark-mode-toggle" id="dark-mode-toggle">🌙</button>
+
+    <!-- Botão de Toggle para a Sidebar -->
+    <button class="toggle-btn" id="toggle-sidebar">☰ Menu</button>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h3>
+            Navegação do Curso
+            <button class="hide-sidebar-btn" id="hide-sidebar">&lt;</button>
+        </h3>
+        <nav>
+            <a href="#topico1">Tópico 1</a>
+            <a href="#topico2">Tópico 2</a>
+            <a href="#topico3">Tópico 3</a>
+            <a href="#topico4">Tópico 4</a>
+        </nav>
+        <h3>Páginas Relacionadas</h3>
+        <a href="extras.html">Recursos Adicionais</a>
+        <a href="extras2.html">Materiais Complementares</a>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="container" id="main-content">
+        <h1>Fundamentos do Curso</h1>
+
+        <!-- Espaço para a imagem -->
+        <div class="image-container">
+            <img src="../imagens/curso.jpg" alt="Imagem do Curso">
+        </div>
+        <hr>
+        <!-- Sessão de Fundamentos -->
+        <section>
+            <h2><strong>Introdução</strong></h2>
+            <p>Este curso aborda os conceitos essenciais para o aprendizado, distribuídos em tópicos fáceis de seguir. Explore cada sessão para aprimorar seus conhecimentos.</p>
+            <ul>
+                <li>
+                    <h2 id="topico1"><strong>Tópico 1:</strong></h2>
+                    <p>Descrição e explicação detalhada do primeiro tópico do curso. Aqui serão explorados os conceitos fundamentais necessários para uma boa compreensão do conteúdo.</p>
+                </li>
+                <hr>
+                <li>
+                    <h2 id="topico2"><strong>Tópico 2:</strong></h2>
+                    <p>Descrição e explicação detalhada do segundo tópico. São fornecidos exemplos práticos para facilitar a assimilação dos conceitos.</p>
+                </li>
+                <hr>
+                <li>
+                    <h2 id="topico3"><strong>Tópico 3:</strong></h2>
+                    <p>O terceiro tópico explora o uso prático dos conceitos, com exercícios e atividades que consolidam o aprendizado.</p>
+                </li>
+                <hr>
+                <li>
+                    <h2 id="topico4"><strong>Tópico 4:</strong></h2>
+                    <p>Descrição e resumo das principais lições aprendidas, com dicas e orientações para o uso do conteúdo no dia a dia.</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>
