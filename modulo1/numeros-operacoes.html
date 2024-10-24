@@ -131,123 +131,135 @@
             <div class="quiz-container">
                 <form id="quiz-form">
                     <!-- Pergunta 1 -->
-            <div class="quiz-question">
-                <p><strong>1. Classificação: Diga se os números a seguir são naturais, inteiros ou racionais:</strong></p>
-                <div class="quiz-answer">
-                    <label for="q1">7:</label>
-                    <select id="q1">
-                        <option value="">Selecione</option>
-                        <option value="natural">Natural</option>
-                        <option value="inteiro">Inteiro</option>
-                        <option value="racional">Racional</option>
-                    </select>
-                </div>
-                
-                <div class="quiz-answer">
-                    <label for="q2">-4:</label>
-                    <select id="q2">
-                        <option value="">Selecione</option>
-                        <option value="natural">Natural</option>
-                        <option value="inteiro">Inteiro</option>
-                        <option value="racional">Racional</option>
-                    </select>
-                </div>
-                
-                <div class="quiz-answer">
-                    <label for="q3">5/3:</label>
-                    <select id="q3">
-                        <option value="">Selecione</option>
-                        <option value="natural">Natural</option>
-                        <option value="inteiro">Inteiro</option>
-                        <option value="racional">Racional</option>
-                    </select>
-                </div>
-                
-                <div class="quiz-answer">
-                    <label for="q4">0:</label>
-                    <select id="q4">
-                        <option value="">Selecione</option>
-                        <option value="natural">Natural</option>
-                        <option value="inteiro">Inteiro</option>
-                        <option value="racional">Racional</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Pergunta 2 -->
-            <div class="quiz-question">
-                <p><strong>2. Operações com Inteiros: Resolva as operações:</strong></p>
-                <div class="quiz-answer">
-                    <label for="q5">7 + (-3) =</label>
-                    <input type="number" id="q5" placeholder="Digite sua resposta">
-                </div>
-                
-                <div class="quiz-answer">
-                    <label for="q6">-2 × 5 =</label>
-                    <input type="number" id="q6" placeholder="Digite sua resposta">
-                </div>
-                
-                <div class="quiz-answer">
-                    <label for="q7">(-10) - (-4) =</label>
-                    <input type="number" id="q7" placeholder="Digite sua resposta">
-                </div>
-            </div>
-
-            <!-- Pergunta 3 -->
-            <div class="quiz-question">
-                <p><strong>3. Conversão de Racionais para Decimais:</strong></p>
-                <div class="quiz-answer">
-                    <label for="q8">1/4 =</label>
-                    <input type="text" id="q8" placeholder="Digite sua resposta">
-                </div>
-                
-                <div class="quiz-answer">
-                    <label for="q9">2/3 =</label>
-                    <input type="text" id="q9" placeholder="Digite sua resposta">
-                </div>
-            </div>
-
+                    <div class="quiz-question">
+                        <p><strong>1. Classificação: Diga se os números a seguir são naturais, inteiros ou racionais:</strong></p>
+                        <div class="quiz-answer">
+                            <label for="q1">7:</label>
+                            <select id="q1">
+                                <option value="">Selecione</option>
+                                <option value="natural">Natural</option>
+                                <option value="inteiro">Inteiro</option>
+                                <option value="racional">Racional</option>
+                            </select>
+                        </div>
+                        <div class="quiz-answer">
+                            <label for="q2">-4:</label>
+                            <select id="q2">
+                                <option value="">Selecione</option>
+                                <option value="natural">Natural</option>
+                                <option value="inteiro">Inteiro</option>
+                                <option value="racional">Racional</option>
+                            </select>
+                        </div>
+                        <div class="quiz-answer">
+                            <label for="q3">5/3:</label>
+                            <select id="q3">
+                                <option value="">Selecione</option>
+                                <option value="natural">Natural</option>
+                                <option value="inteiro">Inteiro</option>
+                                <option value="racional">Racional</option>
+                            </select>
+                        </div>
+                        <div class="quiz-answer">
+                            <label for="q4">0:</label>
+                            <select id="q4">
+                                <option value="">Selecione</option>
+                                <option value="natural">Natural</option>
+                                <option value="inteiro">Inteiro</option>
+                                <option value="racional">Racional</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <!-- Pergunta 2 -->
+                    <div class="quiz-question">
+                        <p><strong>2. Operações com Inteiros: Resolva as operações:</strong></p>
+                        <div class="quiz-answer">
+                            <label for="q5">7 + (-3) =</label>
+                            <input type="number" id="q5" placeholder="Digite sua resposta">
+                        </div>
+                        <div class="quiz-answer">
+                            <label for="q6">-2 × 5 =</label>
+                            <input type="number" id="q6" placeholder="Digite sua resposta">
+                        </div>
+                        <div class="quiz-answer">
+                            <label for="q7">(-10) - (-4) =</label>
+                            <input type="number" id="q7" placeholder="Digite sua resposta">
+                        </div>
+                    </div>
+            
+                    <!-- Pergunta 3 -->
+                    <div class="quiz-question">
+                        <p><strong>3. Conversão de Racionais para Decimais:</strong></p>
+                        <div class="quiz-answer">
+                            <label for="q8">1/4 =</label>
+                            <input type="text" id="q8" placeholder="Digite sua resposta">
+                        </div>
+                        <div class="quiz-answer">
+                            <label for="q9">2/3 =</label>
+                            <input type="text" id="q9" placeholder="Digite sua resposta">
+                        </div>
+                    </div>
             
                     <button type="button" class="quiz-btn" onclick="submitQuiz()">Submeter Respostas</button>
                 </form>
             
                 <div id="quiz-result"></div>
-            </div>            
+            </div>           
 
         </section>
     </div>
 
     <script src="../scripts.js"></script>
     <script>
-            function submitQuiz() {
+        function submitQuiz() {
         // Respostas corretas
         const correctAnswers = {
             q1: 'natural',
             q2: 'inteiro',
             q3: 'racional',
             q4: 'inteiro',
-            q5: 4,
-            q6: -10,
-            q7: -6,
+            q5: '4',
+            q6: '-10',
+            q7: '-6',
             q8: '0.25',
-            q9: '0.666' // Aceite aproximação
+            q9: '0.666'
         };
 
         let score = 0;
-        
-        // Verificar respostas
+        let totalQuestions = 9;
+        let wrongAnswers = [];
+
+        // Verificar respostas e marcar as erradas
         for (let question in correctAnswers) {
             let userAnswer = document.getElementById(question).value.trim().toLowerCase();
-            
-            if (correctAnswers[question].toString() === userAnswer) {
+            let correctAnswer = correctAnswers[question].toString().toLowerCase();
+
+            if (userAnswer === correctAnswer) {
                 score++;
+                document.getElementById(question).style.backgroundColor = 'lightgreen'; // Marcar como correto
+            } else {
+                wrongAnswers.push(question);
+                document.getElementById(question).style.backgroundColor = 'lightcoral'; // Marcar como incorreto
             }
         }
 
         // Exibir resultado
         const resultElement = document.getElementById('quiz-result');
-        resultElement.textContent = `Você acertou ${score} de 9 questões!`;
+        resultElement.textContent = `Você acertou ${score} de ${totalQuestions} questões!`;
+
+        // Se todas as respostas estiverem corretas, exibe confete
+        if (score === totalQuestions) {
+            confetti();
+        }
+
+        // Mostrar quais respostas estão incorretas
+        if (wrongAnswers.length > 0) {
+            let wrongList = wrongAnswers.map(q => `Questão ${q.slice(1)} está incorreta.`).join("\n");
+            alert(wrongList); // Mostra um alerta com as respostas erradas
+        }
     }
+
     </script>
 </body>
 </html>
