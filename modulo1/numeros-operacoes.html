@@ -135,7 +135,7 @@
                         <p><strong>1. Classificação: Diga se os números a seguir são naturais, inteiros ou racionais:</strong></p>
                         <div class="quiz-answer">
                             <label for="q1">7:</label>
-                            <select id="q1">
+                            <select id="q1" onchange="startTimer()">
                                 <option value="">Selecione</option>
                                 <option value="natural">Natural</option>
                                 <option value="inteiro">Inteiro</option>
@@ -144,7 +144,7 @@
                         </div>
                         <div class="quiz-answer">
                             <label for="q2">-4:</label>
-                            <select id="q2">
+                            <select id="q2" onchange="startTimer()">
                                 <option value="">Selecione</option>
                                 <option value="natural">Natural</option>
                                 <option value="inteiro">Inteiro</option>
@@ -153,7 +153,7 @@
                         </div>
                         <div class="quiz-answer">
                             <label for="q3">5/3:</label>
-                            <select id="q3">
+                            <select id="q3" onchange="startTimer()">
                                 <option value="">Selecione</option>
                                 <option value="natural">Natural</option>
                                 <option value="inteiro">Inteiro</option>
@@ -162,7 +162,7 @@
                         </div>
                         <div class="quiz-answer">
                             <label for="q4">0:</label>
-                            <select id="q4">
+                            <select id="q4" onchange="startTimer()">
                                 <option value="">Selecione</option>
                                 <option value="natural">Natural</option>
                                 <option value="inteiro">Inteiro</option>
@@ -176,15 +176,15 @@
                         <p><strong>2. Operações com Inteiros: Resolva as operações:</strong></p>
                         <div class="quiz-answer">
                             <label for="q5">7 + (-3) =</label>
-                            <input type="number" id="q5" placeholder="Digite sua resposta">
+                            <input type="number" id="q5" placeholder="Digite sua resposta" onchange="startTimer()">
                         </div>
                         <div class="quiz-answer">
                             <label for="q6">-2 × 5 =</label>
-                            <input type="number" id="q6" placeholder="Digite sua resposta">
+                            <input type="number" id="q6" placeholder="Digite sua resposta" onchange="startTimer()">
                         </div>
                         <div class="quiz-answer">
                             <label for="q7">(-10) - (-4) =</label>
-                            <input type="number" id="q7" placeholder="Digite sua resposta">
+                            <input type="number" id="q7" placeholder="Digite sua resposta" onchange="startTimer()">
                         </div>
                     </div>
             
@@ -193,11 +193,11 @@
                         <p><strong>3. Conversão de Racionais para Decimais:</strong></p>
                         <div class="quiz-answer">
                             <label for="q8">1/4 =</label>
-                            <input type="text" id="q8" placeholder="Digite sua resposta">
+                            <input type="text" id="q8" placeholder="Digite sua resposta" onchange="startTimer()">
                         </div>
                         <div class="quiz-answer">
                             <label for="q9">2/3 =</label>
-                            <input type="text" id="q9" placeholder="Digite sua resposta">
+                            <input type="text" id="q9" placeholder="Digite sua resposta" onchange="startTimer()">
                         </div>
                     </div>
             
@@ -205,14 +205,34 @@
                 </form>
             
                 <div id="quiz-result"></div>
-            </div>           
+                <p id="timer">Tempo: 0 segundos</p>
+            </div>
 
         </section>
     </div>
 
     <script src="../scripts.js"></script>
     <script>
-        function submitQuiz() {
+    let timerStarted = false;
+    let startTime, timerInterval;
+
+    // Função para iniciar o contador de tempo
+    function startTimer() {
+        if (!timerStarted) {
+            timerStarted = true;
+            startTime = Date.now();
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+    }
+
+    function updateTimer() {
+        const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+        document.getElementById('timer').textContent = `Tempo: ${elapsedTime} segundos`;
+    }
+
+    function submitQuiz() {
+        clearInterval(timerInterval); // Parar o cronômetro
+
         // Respostas corretas
         const correctAnswers = {
             q1: 'natural',
@@ -244,19 +264,21 @@
             }
         }
 
-        // Exibir resultado
+        // Exibir resultado dinamicamente com coloração
         const resultElement = document.getElementById('quiz-result');
-        resultElement.textContent = `Você acertou ${score} de ${totalQuestions} questões!`;
-
-        // Se todas as respostas estiverem corretas, exibe confete
         if (score === totalQuestions) {
-            confetti();
+            resultElement.textContent = `Parabéns! Você acertou todas as ${totalQuestions} questões!`;
+            resultElement.style.color = 'green';
+            confetti(); // Celebrar com confetes se acertou tudo
+        } else {
+            resultElement.textContent = `Você acertou ${score} de ${totalQuestions} questões. Tente novamente!`;
+            resultElement.style.color = 'red';
         }
 
         // Mostrar quais respostas estão incorretas
         if (wrongAnswers.length > 0) {
             let wrongList = wrongAnswers.map(q => `Questão ${q.slice(1)} está incorreta.`).join("\n");
-            // alert(wrongList); // Mostra um alerta com as respostas erradas
+            alert(wrongList); // Mostra um alerta com as respostas erradas
         }
     }
 
