@@ -11,6 +11,12 @@ body {
     min-height: 100vh;
 }
 
+/* Estilo para números destacados */
+.example-number {
+    font-weight: bold !important;
+    color: #0066cc !important;
+}
+
 .wrapper {
     flex: 1;
     min-height: 100vh;
@@ -316,6 +322,170 @@ body.dark-mode .progress-bar {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     transition: margin-left 0.3s, max-width 0.3s;
     margin-left: 300px; /* Aumentar margem para o conteúdo */
+}
+
+/* Estilo básico para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Estilo para as células da tabela */
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para a linha do cabeçalho */
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Estilo alternado para as linhas da tabela */
+tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+/* Estilo para hover */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tornar a tabela responsiva */
+table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Centralizar a tabela */
+table {
+    margin: 20px auto;
+}
+
+/* Estilo adicional para mobile */
+@media (max-width: 600px) {
+    th, td {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-question {
+    background-color: #f9f9f9; /* Cor de fundo leve */
+    border: 1px solid #ddd; /* Borda cinza */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaçamento entre perguntas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.2s ease; /* Transição suave para o efeito de hover */
+}
+
+.quiz-question:hover {
+    transform: scale(1.02); /* Aumenta levemente ao passar o mouse */
+}
+
+.quiz-answer {
+    background-color: #e0f7fa; /* Cor de fundo das respostas */
+    border: 1px solid #b2ebf2; /* Borda azul claro */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Margem vertical */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+.quiz-answer label {
+    margin-right: 10px; /* Espaço entre o rótulo e o seletor/campo de texto */
+}
+
+.quiz-answer:hover {
+    background-color: #b2ebf2; /* Muda a cor ao passar o mouse */
+}
+
+
+.quiz-question label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.quiz-question select,
+.quiz-question input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.quiz-btn {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quiz-btn:hover {
+    background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Pequeno aumento no tamanho */
+}
+
+
+#quiz-result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 8px; /* Espaçamento interno */
+    width: calc(100% - 20px); /* Preenche o espaço disponível */
+    transition: border-color 0.3s ease; /* Transição suave para a borda */
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+    border-color: #007bff; /* Muda a cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 15px;
+    }
+    
+    button {
+        padding: 10px;
+    }
 }
 
 /* Links */

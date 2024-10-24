@@ -6,6 +6,8 @@
     <title>Curso Online</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="icon" href="imagens/faviconcourse.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <!-- Botão para alternar entre modos claro e escuro -->
@@ -41,11 +43,11 @@
         <section>
             <h2 id="numeros-naturais"><strong>1. Números Naturais</strong></h2>
             <p><strong>Definição:</strong> Os <strong>números naturais</strong> são utilizados para contar e ordenar. Incluem números inteiros positivos a partir do zero.</p>
-            <p><strong>Exemplo:</strong> \( N = \{0, 1, 2, 3, 4, 5, 6, \dots \} \)</p>
+            <p><strong>Exemplo:</strong> <span class="example-number">N = {0, 1, 2, 3, 4, 5, 6, ...}</span></p>
             <p><strong>Propriedades:</strong></p>
             <ul>
-                <li><strong>Fechamento:</strong> A soma de dois números naturais é sempre um número natural. Ex.: \( 2 + 3 = 5 \).</li>
-                <li><strong>Identidade Aditiva:</strong> O número zero é o elemento neutro na adição. Ex.: \( 5 + 0 = 5 \).</li>
+                <li><strong>Fechamento:</strong> A soma de dois números naturais é sempre um número natural. Ex.:<span class="example-number">( 2 + 3 = 5 ).</span></li>
+                <li><strong>Identidade Aditiva:</strong> O número zero é o elemento neutro na adição. Ex.:<span class="example-number">( 5 + 0 = 5 ).</span></li>
                 <li><strong>Não possui identidade multiplicativa inversa:</strong> A divisão de dois números naturais nem sempre resulta em outro número natural.</li>
             </ul>
             <p><strong>Aplicação:</strong> Usado para contagem de objetos discretos, como o número de maçãs em uma cesta.</p>
@@ -53,19 +55,21 @@
 
             <h2 id="numeros-inteiros"><strong>2. Números Inteiros</strong></h2>
             <p><strong>Definição:</strong> Os <strong>números inteiros</strong> incluem números naturais, seus opostos negativos e o zero.</p>
-            <p><strong>Exemplo:</strong> \( Z = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \} \)</p>
+            <p><strong>Exemplo:</strong> <span class="example-number">Z = {..., -3, -2, -1, 0, 1, 2, 3, ...}</span></p>
             <p><strong>Propriedades:</strong></p>
             <ul>
                 <li><strong>Fechamento:</strong> A soma, subtração e multiplicação de dois inteiros resulta em outro número inteiro.</li>
-                <li><strong>Identidade Aditiva e Multiplicativa:</strong> \( x + 0 = x \) e \( x \times 1 = x \).</li>
-                <li><strong>Inverso Aditivo:</strong> Para todo \( x \), existe um oposto \( -x \) tal que \( x + (-x) = 0 \).</li>
-            </ul>
+                <li><strong>Identidade Aditiva e Multiplicativa:</strong> <span class="example-number">x + 0 = x</span> e <span class="example-number">x × 1 = x</span>.</li>
+                <li><strong>Inverso Aditivo:</strong> Para todo <span class="example-number">x</span>, existe um oposto <span class="example-number">-x</span> tal que <span class="example-number">x + (-x) = 0</span>.</li>
+            </ul>            
+
             <p><strong>Aplicação:</strong> Utilizado em situações que envolvem valores negativos, como saldo bancário negativo.</p>
             <hr>
 
             <h2 id="numeros-racionais"><strong>3. Números Racionais</strong></h2>
             <p><strong>Definição:</strong> Os <strong>números racionais</strong> podem ser expressos como fração de dois números inteiros, onde o denominador é diferente de zero.</p>
-            <p><strong>Exemplo:</strong> \( Q = \left\{ \frac{a}{b} \mid a \in Z, b \in Z, b \neq 0 \right\} \)</p>
+            <p><strong>Exemplo:</strong> <span class="example-number">Q = { a/b | a ∈ Z, b ∈ Z, b ≠ 0 }</span></p>
+
             <p><strong>Propriedades:</strong></p>
             <ul>
                 <li><strong>Densidade:</strong> Entre dois números racionais sempre existe outro número racional.</li>
@@ -88,9 +92,9 @@
                 <tbody>
                     <tr>
                         <td>Representação</td>
-                        <td>\{0, 1, 2, 3, \dots \}</td>
-                        <td>\{\dots, -2, -1, 0, 1, 2, \dots \}</td>
-                        <td>\( \frac{a}{b}, a, b \in Z, b \neq 0 \)</td>
+                        <td>{0, 1, 2, 3, ...}</td>
+                        <td>{..., -2, -1, 0, 1, 2, ...}</td>
+                        <td>a/b, a, b ∈ Z, b ≠ 0</td>
                     </tr>
                     <tr>
                         <td>Contém números negativos?</td>
@@ -112,43 +116,138 @@
                     </tr>
                 </tbody>
             </table>
+
             <hr>
 
             <h2 id="exemplos"><strong>5. Exemplos de Aplicações na Vida Real</strong></h2>
             <ul>
                 <li><strong>Números Naturais:</strong> Contagem de objetos (ex.: alunos em uma sala).</li>
-                <li><strong>Números Inteiros:</strong> Dívidas ou temperaturas negativas (ex.: -3°C).</li>
-                <li><strong>Números Racionais:</strong> Medições precisas, como cortar uma pizza em frações.</li>
+                <li><strong>Números Inteiros:</strong> Datas, Temperaturas negativas (ex.: -3°C).</li>
+                <li><strong>Números Racionais:</strong> Medições precisas, peso, saldo do banco etc.</li>
             </ul>
             <hr>
 
-            <h2 id="exercicios"><strong>6. Exercícios Propostos</strong></h2>
-            <ol>
-                <li>Classificação: Diga se os números a seguir são naturais, inteiros ou racionais:
-                    <ul>
-                        <li>7</li>
-                        <li>-4</li>
-                        <li>\( \frac{5}{3} \)</li>
-                        <li>0</li>
-                    </ul>
-                </li>
-                <li>Operações com Inteiros: Resolva as operações:
-                    <ul>
-                        <li>7 + (-3)</li>
-                        <li>-2 × 5</li>
-                        <li>\( (-10) - (-4) \)</li>
-                    </ul>
-                </li>
-                <li>Conversão de Racionais para Decimais: Converta as frações para decimais:
-                    <ul>
-                        <li>\( \frac{1}{4} \)</li>
-                        <li>\( \frac{2}{3} \)</li>
-                    </ul>
-                </li>
-            </ol>
+            <h2 id="exercicios"><strong>6. Exercícios Propostos (Quiz)</strong></h2>
+            <div class="quiz-container">
+                <form id="quiz-form">
+                    <!-- Pergunta 1 -->
+            <div class="quiz-question">
+                <p><strong>1. Classificação: Diga se os números a seguir são naturais, inteiros ou racionais:</strong></p>
+                <div class="quiz-answer">
+                    <label for="q1">7:</label>
+                    <select id="q1">
+                        <option value="">Selecione</option>
+                        <option value="natural">Natural</option>
+                        <option value="inteiro">Inteiro</option>
+                        <option value="racional">Racional</option>
+                    </select>
+                </div>
+                
+                <div class="quiz-answer">
+                    <label for="q2">-4:</label>
+                    <select id="q2">
+                        <option value="">Selecione</option>
+                        <option value="natural">Natural</option>
+                        <option value="inteiro">Inteiro</option>
+                        <option value="racional">Racional</option>
+                    </select>
+                </div>
+                
+                <div class="quiz-answer">
+                    <label for="q3">5/3:</label>
+                    <select id="q3">
+                        <option value="">Selecione</option>
+                        <option value="natural">Natural</option>
+                        <option value="inteiro">Inteiro</option>
+                        <option value="racional">Racional</option>
+                    </select>
+                </div>
+                
+                <div class="quiz-answer">
+                    <label for="q4">0:</label>
+                    <select id="q4">
+                        <option value="">Selecione</option>
+                        <option value="natural">Natural</option>
+                        <option value="inteiro">Inteiro</option>
+                        <option value="racional">Racional</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="quiz-question">
+                <p><strong>2. Operações com Inteiros: Resolva as operações:</strong></p>
+                <div class="quiz-answer">
+                    <label for="q5">7 + (-3) =</label>
+                    <input type="number" id="q5" placeholder="Digite sua resposta">
+                </div>
+                
+                <div class="quiz-answer">
+                    <label for="q6">-2 × 5 =</label>
+                    <input type="number" id="q6" placeholder="Digite sua resposta">
+                </div>
+                
+                <div class="quiz-answer">
+                    <label for="q7">(-10) - (-4) =</label>
+                    <input type="number" id="q7" placeholder="Digite sua resposta">
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="quiz-question">
+                <p><strong>3. Conversão de Racionais para Decimais:</strong></p>
+                <div class="quiz-answer">
+                    <label for="q8">1/4 =</label>
+                    <input type="text" id="q8" placeholder="Digite sua resposta">
+                </div>
+                
+                <div class="quiz-answer">
+                    <label for="q9">2/3 =</label>
+                    <input type="text" id="q9" placeholder="Digite sua resposta">
+                </div>
+            </div>
+
+            
+                    <button type="button" class="quiz-btn" onclick="submitQuiz()">Submeter Respostas</button>
+                </form>
+            
+                <div id="quiz-result"></div>
+            </div>            
+
         </section>
     </div>
 
     <script src="../scripts.js"></script>
+    <script>
+            function submitQuiz() {
+        // Respostas corretas
+        const correctAnswers = {
+            q1: 'natural',
+            q2: 'inteiro',
+            q3: 'racional',
+            q4: 'inteiro',
+            q5: 4,
+            q6: -10,
+            q7: -6,
+            q8: '0.25',
+            q9: '0.666' // Aceite aproximação
+        };
+
+        let score = 0;
+        
+        // Verificar respostas
+        for (let question in correctAnswers) {
+            let userAnswer = document.getElementById(question).value.trim().toLowerCase();
+            
+            if (correctAnswers[question].toString() === userAnswer) {
+                score++;
+            }
+        }
+
+        // Exibir resultado
+        const resultElement = document.getElementById('quiz-result');
+        resultElement.textContent = `Você acertou ${score} de 9 questões!`;
+    }
+    </script>
 </body>
 </html>
